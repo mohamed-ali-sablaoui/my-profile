@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My personal page</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    #navbar{
+      position: relative;
+      min-width: 600px;
+      width: 100%;
+      height: 100px;
+      background-color: rgb(21, 0, 80);
+      padding: 20px 0px 20px 0px;
+      margin-bottom: 40px;
+    }
+    #titre{
+      min-width: 400px;
+      font-size: 40px;
+      color: white;
+      margin-left: 50%;
+      transform: translateX(-30%);
+      text-shadow: 0 0 3px white;
+    }
+    #glien{
+      height: auto;
+      min-width: 200px;
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      margin: 20px;
+    }
+    .lien_interieur{
+      font-size: 20px ;
+      text-decoration: none;
+      margin: 0px 10px 0px 10px ;
+      color: rgb(11, 121, 185);
+      text-shadow: 0 0 1px aqua;
+    }
+    #me{
+      margin-bottom: 30px;
+      height: auto;
+      width: 95%;
+      min-width: 600px;
+      padding: 20px;
+      background: linear-gradient(to top,rgb(255, 255, 255) 0%,  rgb(235, 231, 231) 25%,  rgb(255, 255, 255) 50%,rgb(255, 255, 255) 62.5%, rgb(238, 234, 234) 75%,rgb(235, 235, 238) 87.5%, rgb(255, 255, 255) 100%);
+      box-shadow: 0 0 4px 2px rgb(238, 238, 238);
+      position: relative;
+    }
+    #my_img{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: inline-block;
+      margin: 0px 20px 0px 0px ;
+    }
+    #myname{
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 260px;
+    }
+    #like{
+      padding: 5px;
+      margin-top: 30px;
+      font-size: 20px;
+      position: absolute;
+      left: 50px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 58);
+      border-color: rgb(0, 0, 139);
+      width: 70px;
+      border-radius: 10px;
+    }
+    #projers{
+      height: 90%;
+      width: auto;
+      min-width: 600px;
+      padding: 80px 30px 20px 30px ;
+      background: linear-gradient(to top,rgb(255, 255, 255) 0%, rgb(234, 234, 238) 12.5%, rgb(255, 255, 255) 25%, rgb(233, 233, 236) 37.5%, rgb(235, 234, 238) 50%,rgb(255, 255, 255) 62.5%, rgb(241, 237, 237) 75%,rgb(233, 233, 236) 87.5%, rgb(255, 255, 255) 100%);
+      box-shadow: 0 0 5px 20px rgb(238, 238, 238);
+      position: relative;
+      border: 2px solid rgb(0, 0, 117);
+      border-radius: 10px;
+      margin: 30px 0px 30px 0px ;
+      padding: 20px;
+      text-align: center;
+    }
+    .projer{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 40px;
+      margin-bottom: 40px;
+      background-color: rgb(230, 228, 235);
+      border: 2px solid rgb(0, 15, 99);
+      box-shadow: 0 0 10px 2px rgb(0, 27, 87);
+      border-radius: 10px;
+      display: inline-block;
+      text-align: center;
+      padding: 10px;
+    }
+    .id_projer{
+      text-decoration: none;
+      font-size: 30px;
+      color: rgb(0, 2, 107);
+      text-shadow: 0 0 2px rgb(6, 72, 170);
+    }
+    .def_projer{
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: normal;
+      margin: auto;
+      max-width: 150px;
+      max-height: 150px;
+      margin-top:25px ;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+    }
+    #skills{
+      position: relative;
+      width:100% ;
+      height: auto;
+      background: linear-gradient(to top,rgb(255, 255, 255) 0%,  rgb(235, 231, 231) 20%,  rgb(255, 255, 255) 50%,rgb(255, 255, 255) 62.5%, rgb(240, 236, 236) 75%,rgb(236, 236, 240) 87.5%, rgb(255, 255, 255) 100%);
+      padding: 40px 20px 20px 20px ;
+      margin: 10px 0px 20px 0px ;
+      box-shadow: 0 0 4px 2px rgb(238, 238, 238);
+
+    }
+    #about_me{
+      position: relative;
+      width:90% ;
+      height: auto;
+      background: linear-gradient(to top,rgb(255, 255, 255) 0%,  rgb(236, 232, 232) 25%,  rgb(255, 255, 255) 50%,rgb(255, 255, 255) 62.5%, rgb(230, 225, 225) 75%,rgb(233, 233, 236) 87.5%, rgb(255, 255, 255) 100%);
+      padding: 55px 5% 5% 2% ;
+      margin: 30px 0px 30px 0px ;      
+      box-shadow: 0 0 4px 2px rgb(238, 238, 238);
+
+    }
+    #contact{
+      position: relative;
+      width:90% ;
+      height: auto;
+      background: linear-gradient(to top,rgb(255, 255, 255) 0%,  rgb(241, 236, 236) 25%,  rgb(240, 235, 235) 50%,rgb(238, 234, 234) 62.5%, rgb(233, 229, 229) 75%,rgb(235, 235, 240) 87.5%, rgb(255, 255, 255) 100%);
+      padding: 55px 5% 5% 5% ;
+      margin: 30px 0px 30px 0px ;
+      box-shadow: 0 0 4px 2px rgb(238, 238, 238);
+
+    }
+    #y_name , #y_email , #y_masseg {
+      max-width: 400px;
+      width: 300px;
+      min-height: 20px;
+      color: rgb(2, 2, 53);
+      margin: 20px;
+      padding: 10px;
+      position: relative;
+      left: 80px;
+      border: 2px solid rgb(2, 2, 68);
+      border-radius: 10px;
+    }
+    #y_masseg{
+      max-width: 450px;
+      width: 350px;
+      height: 80px;
+      max-height: 120px ;
+      margin-bottom: 60px;
+    }
+    #send{
+      padding: 5px;
+      margin-top: 30px;
+      font-size: 20px;
+      position: relative;
+      left: -180px;
+      color: rgb(1, 1, 80);
+      border-color: rgb(0, 0, 80);
+      border-width:3px ;
+      width: 70px;
+      border-radius: 10px;
+      font-size: x-large;
+    }
+    #a_me{
+      width: 90%;
+      max-width: 800px;
+      margin: 20px;
+      border: 3px solid rgb(2, 2, 78) ;
+      padding: 30px 40px 20px 40px ;
+      border-radius: 10px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <script >
+    function liked() {
+      let b = document.getElementById("like");
+      let currentColor = window.getComputedStyle(b).color;
+      let currentBg = window.getComputedStyle(b).backgroundColor;
+      if (currentColor === "rgb(0, 0, 58)" && currentBg === "rgb(255, 255, 255)") {
+        b.style.color = "rgb(255, 255, 255)";
+        b.style.backgroundColor = "rgb(0, 0, 58)";
+        b.innerHTML="like" ;
+      } else {
+        b.style.color = "rgb(0, 0, 58)";
+        b.style.backgroundColor = "rgb(255, 255, 255)";
+        b.innerHTML="like ✓" ;
+      }
+    }
+    function verif(){
+              document.getElementById("missage").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let email = document.getElementById("y_name").value.trim();
+            let name = document.getElementById("y_email").value.trim();
+            let message = document.getElementById("y_masseg").value.trim();
+            let emailForm = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email === "" || !emailForm.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if(name === "") {
+                alert("Please enter your name");
+                return false;
+            }
+            if(message === "") {
+                alert("Please write your message");
+                return false;
+            }
+
+            alert("Message sent successfully!");
+            return true ;
+        });
+    }
+    
+    
+  </script>
+</head>
+<body>
+  <div class="conteneur" id="navbar">
+    <h1 id="titre">Personal profile</h1>
+    <div id="glien">
+    <a href="#projer" class="lien_interieur">projects</a>
+    <a href="#skills" class="lien_interieur">skills</a>
+    <a href="#about_me" class="lien_interieur">about me</a>
+    <a href="#contact" class="lien_interieur">contact</a>
+    </div>
+  </div>
+  <div class="conteneur" id="me">
+    <img src="image3.png"  id="my_img">
+    <div id="myname" >
+      <h1 style="font-size: 35px; color: rgb(23, 5, 128) ;">mohamed ali sablaoui</h1>
+      <p style="margin-top: 20px;"> 💻 Software & Web Developer | 🌐 Creating digital experiences |
+         🚀 Passion for innovation</p>
+      <button id="like" onclick="liked()">like</button>
+    </div>
+  </div>
+  <div class="conteneur" id="projers">
+    <h1 style="color: rgb(0, 0, 73); position: absolute; left: 40px;">. My projer</h1>
+     <div  class="projer">
+        <a href="https://mohamed-ali-sablaoui.github.io/loading/" class="id_projer">loding</a>
+        <p class="def_projer">✨ One of the ways to write loading code ⏳💻</p>       
+     </div>
+     <div  class="projer">
+        <a href="https://mohamed-ali-sablaoui.github.io/Chasseur-d-etoiles/" class="id_projer">star collector</a>
+        <p class="def_projer">🌟 Star Collector game with beautiful ✨
+           and exciting 🎉 effects</p>
+     </div>
+     <div  class="projer">
+        <a href="https://mohamed-ali-sablaoui.github.io/jornal/" class="id_projer">jornal</a>
+        <p class="def_projer">📸 Portfolio to capture beautiful moments ✨ and stunning photos 🌟</p>
+     </div>
+     <div class="projer">
+        <a href=" https://mohamed-ali-sablaoui.github.io/modif.bouton/" class="id_projer">modif.bouton</a>
+        <p class="def_projer">🎨 Learn how to style buttons 🔘 using CSS</p>
+     </div>
+     <div  class="projer">
+        <a href="https://mohamed-ali-sablaoui.github.io/modif.text/" class="id_projer">modif.text</a>
+        <p class="def_projer">🎨 Learn how to control text styling ✍️ using CSS</p>
+     </div>
+     <div  class="projer">
+        <a href="https://mohamed-ali-sablaoui.github.io/reservation/" class="id_projer">reservation</a>
+        <p class="def_projer">✈️ Choose your destination 🌍 and leave the travel arrangements to us 🧳</p>
+     </div>
+  </div>
+  <div class="conteneur" id="skills">
+    <h1 style="color: rgb(0, 0, 73); position: absolute; left: 40px;top: 10px;">. My skills</h1>
+    <div  style="border-bottom: 2px solid rgb(0, 0, 94);border-top: 2px solid rgb(0, 0, 94);padding: 30px; margin: 20px;">
+     <img src="image1.png" alt="" style="height: 60px; "><img src="image2.png" alt="" style="height: 60px; ">
+    </div>
+  </div>
+  <div class="conteneur" id="about_me">
+    <h1 style="color: rgb(0, 0, 73); position: absolute; left: 100px;top: 10px;">. about me</h1>
+    <div id="a_me">
+        <pre style="font-size: 15px; color: rgb(4, 4, 97);">
+1️⃣ I'm Mohamed Ali, 19, studying Computer Science. 🎓👨‍💻
+
+2️⃣ I love making websites and fun games. 🌐🎮
+
+3️⃣ Always learning and improving myself. 💪📚
+
+4️⃣ Curious and eager to discover new things. 🔍✨
+
+5️⃣ Creativity is part of me, I share my ideas. 🎨💡
+
+6️⃣ Big ambitions, learning is the key! 🚀🏆</pre>
+    </div>
+  </div>
+  <div class="conteneur" id="contact">
+      <h1 style="color: rgb(0, 0, 73); position: absolute; left: 40px;top: 10px;">. contact with me</h1>
+      
+      <form  id="missage">
+          <p></p><input type="email"  id="y_name" placeholder="enter your email">
+          <p></p><input type="text" id="y_email" placeholder="enter your name">
+          <p></p><textarea  id="y_masseg" placeholder="enter your masseg" ></textarea>
+          <button id="send" onclick="verif()">send</button>
+      </form>
+  </div>
+</body>
+</html>
